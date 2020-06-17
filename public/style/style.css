@@ -1,0 +1,11 @@
+.user-text-input{
+  max-width: 200px;
+}
+
+.container{
+  margin: 2em 0;
+}
+
+.submit-warning{
+  display: none;
+}
