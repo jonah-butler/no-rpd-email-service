@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 })
 
 app.post("/submit", (req, res) => {
-
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
   // to: ['jonahbutler6@gmail.com', 'jonahbutler@jonahbutlermusic.com'];
 	const msg = {
 	  to: 'jonahbutler6@gmail.com',
