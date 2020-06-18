@@ -14,7 +14,7 @@ function gatherData(obj){
     message: message,
     checkBox: obj.checkBox.checked,
     messageHeader: `This email was sent by ${obj.nameInput.value} who can be reached at ${obj.emailInput.value}.`,
-    messageFooter: `This message was delivered through nameofsite.org with the intent of providing ease of communication to those who would like to see the removal of RPD in RPS.`
+    messageFooter: `This message was delivered through http://www.norpdinrps.com/ with the intent of providing ease of communication to those who would like to see the removal of RPD in RPS.`
   }
 }
 

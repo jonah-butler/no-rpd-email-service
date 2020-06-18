@@ -27,7 +27,7 @@ app.post("/submit", (req, res) => {
   // to: ['jonahbutler6@gmail.com', 'jonahbutler@jonahbutlermusic.com'];
 	const msg = {
 	  to: 'jonahbutler6@gmail.com',
-	  from: req.body.email,
+	  from: 'community-voice@norpdinrps.com',
 	  subject: 'Sample Subject',
 	  // text: req.body.message,
     html: "<h3>" + req.body.messageHeader + "</h3> <br><br> <p>" + req.body.message + "</p> <br><br> <p style='font-size: 10px'>" + req.body.messageFooter + "</p>"
