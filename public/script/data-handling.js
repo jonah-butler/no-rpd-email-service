@@ -11,6 +11,7 @@ function gatherData(obj){
   return dataObj = {
     name: obj.nameInput.value,
     email: obj.emailInput.value,
+    repEmail: obj.repEmail.value,
     message: message,
     checkBox: obj.checkBox.checked,
     messageHeader: `This email was sent by ${obj.nameInput.value} who can be reached at ${obj.emailInput.value}.`,

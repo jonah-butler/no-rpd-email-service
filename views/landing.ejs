@@ -1,14 +1,71 @@
 <%- include ('partials/header') %>
 
+<div id="imgModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" src="/imgs/rva-district-map.png" id="districtMap">
+  <div id="caption"></div>
+</div>
+
 <div class="ui container">
   <div class="ui segment">
-    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+    <p>Spicy jalapeno bacon ipsum dolor amet meatball beef alcatra capicola, salami picanha tail ground round chicken meatloaf frankfurter turducken. Landjaeger frankfurter boudin, rump filet mignon jerky spare ribs chuck bresaola. Chicken frankfurter kielbasa tri-tip cupim alcatra ribeye. Shankle frankfurter ground round meatloaf kevin, ham hock boudin ham spare ribs. Kielbasa doner biltong beef ribs ham landjaeger turducken ham hock shoulder. Tenderloin bacon buffalo picanha chicken ribeye. Fatback rump corned beef pork belly ball tip venison tri-tip.</p>
   </div>
 </div>
 
 <div class="ui divider"></div>
 
-<div class="ui container">
+<div id="form" class="ui container">
+  <div class="ui container">
+    If you are unsure of your district, check out the <span class="text-event-modal">District Map</span>.
+  </div>
+  <div class="ui container">
+    <label>Select your district's school board representative</label>
+    <div class="ui fluid selection dropdown">
+    <input type="hidden" class="representative" name="representative">
+    <i class="dropdown icon"></i>
+    <div class="default text">Select District</div>
+    <div class="menu">
+      <div class="item" data-value="edoerr@rvaschools.net">
+        <span>1st district</span>
+        Elizabeth Doerr
+      </div>
+      <div class="item" data-value="jbarlow3@rvaschools.net">
+        <span>2nd district</span>
+        James “Scott” Barlow
+      </div>
+      <div class="item" data-value="kgibson@rvaschools.net">
+        <span>3rd District</span>
+        Kenya Gibson
+      </div>
+      <div class="item" data-value="jyoung7@rvaschools.net">
+        <span>4th District</span>
+        Johnathan Young
+      </div>
+      <div class="item" data-value="psapini@rvaschools.net">
+        <span>5th District</span>
+        Patrick Sapini
+      </div>
+      <div class="item" data-value="fcosby@rvaschools.net">
+        <span>6th District</span>
+        Felicia Cosby
+      </div>
+      <div class="item" data-value="cburke2@rvaschools.net">
+        <span>7th District</span>
+        Cheryl Burke
+      </div>
+      <div class="item" data-value="dpage2@rvaschools.net">
+        <span>8th District</span>
+        Dawn Page
+      </div>
+      <div class="item" data-value="lowen2@rvaschoolsnet ">
+        <span>9th District</span>
+        Linda Owen
+      </div>
+    </div>
+  </div>
+
+  </div>
+
   <form class="ui form">
     <div class="field user-name-input user-text-input">
       <label>Name</label>
@@ -32,7 +89,13 @@
     </div>
     <div class="field">
       <label>Message Body</label>
-      <textarea class="default-message-field" readonly="" placeholder="This will be the default message value"></textarea>
+      <textarea class="default-message-field" readonly="" placeholder="Dear [SCHOOL BOARD MEMBER],
+
+I am a [RICHMOND TEACHER, STUDENT, CITIZEN] living in your district.  I am writing to urge you to vote to terminate the memorandum of understanding between RPD and RPS and move immediately on a one-to-one replacement of school resource officers with nondisciplinary support staff positions like counselors and mental health providers.  The district’s strategic plan, DREAMS4RPS, outlines a commitment to creating a safe and loving school culture.  This cannot be fully realized should RPS continue to staff schools with police officers.  Long before the high-profile murders of unarmed Black civilians by officers and the presence of militarized police forces at peaceful protests, police interactions have been a source of trauma for students and families throughout our division.  The mere presence of an officer can trigger memories of violent events and family member removal in students.  Reliance on SROs criminalizes students and their behaviors that can and must be addressed compassionately through other means.
+In addition to the termination of the MOU, I urge you to support the re-allocation of funds to hire more guidance counselors, behavior counselors, and mental health providers in our schools, implement restorative justice practices in schools across the district, and support the student leaders who are working to build a coalition to address racial disparities in RPS.
+
+Thank you for your time and consideration.
+"></textarea>
     </div>
     <div class="field">
       <label>If you would prefer to write your own message, please fill out this form area, and this message will be sent instead</label>

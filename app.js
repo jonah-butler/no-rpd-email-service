@@ -25,6 +25,7 @@ app.get("/", (req, res) => {
 app.post("/submit", (req, res) => {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
   // to: ['jonahbutler6@gmail.com', 'jonahbutler@jonahbutlermusic.com'];
+  // superintendent Kamras jkamras@rvaschools.net
 	const msg = {
 	  to: 'jonahbutler6@gmail.com',
 	  from: 'community-voice@norpdinrps.com',
@@ -47,7 +48,3 @@ if (port == null || port == "") {
   port = 3000;
 }
 app.listen(port);
-
-app.listen(3000, (req, res) => {
-	console.log('server is running');
-})

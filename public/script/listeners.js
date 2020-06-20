@@ -19,7 +19,7 @@ function inputListeners(inputQuerySelector, parentField, inputType){
 function submitFormListener(button, obj){
   button.addEventListener('click', () => {
      let data = gatherData(obj);
-     console.log(data);
+     formErrorListener(obj);
      if(data.checkBox !== true || data.name.length === 0 && data.email.indexOf('@') == -1){
        document.querySelector('.submit-warning').style.display = "block";
      } else {
@@ -46,4 +46,21 @@ function submitFormListener(button, obj){
   })
 }
 
-export { inputListeners, submitFormListener };
+function formErrorListener(formObj){
+  Object.keys(formObj).forEach((key) => {
+    if(!formObj[key].value || !formObj[key].checked){
+      formObj[key].parentElement.classList.add('error');
+    }
+  })
+}
+
+function modalInit(node){
+  node.addEventListener('click', () => {
+    document.querySelector('#imgModal').style.display = 'block';
+    document.querySelector('#imgModal').addEventListener('click', () => {
+      document.querySelector('#imgModal').style.display = 'none';
+    })
+  })
+}
+
+export { inputListeners, submitFormListener, modalInit, formErrorListener };
