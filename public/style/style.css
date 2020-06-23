@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .user-text-input{
   max-width: 200px;
 }
@@ -10,7 +17,16 @@
   display: none;
 }
 
+.header-text{
+  border: none !important;
+  box-shadow: none !important;
+  border-left: 2px solid #fdbe12 !important;
+  border-radius: 0px !important;
+}
+
 .sticky-top{
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
   transition: all .3s ease;
 }
 
@@ -22,6 +38,12 @@
   width: 100% !important;
 }
 
+@media only screen and (max-width: 767.98px){
+  .sticky-top{
+    margin-left: 0px !important;
+  }
+}
+
 .text-event-modal{
   color: #cc262d;
   font-size: 1.3em;
@@ -31,6 +53,11 @@
 .text-event-modal:hover{
   color: black;
   cursor: pointer;
+}
+
+.form-helper{
+  margin-bottom: 20px;
+  font-size: 11px;
 }
 
 #districtMap{
@@ -131,4 +158,58 @@ div.item > span{
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
+}
+
+.field{
+  position: relative;
+  margin: 15px 0px !important;
+}
+
+.text-area-label{
+  position: relative !important;
+}
+
+.ui.form .field>label{
+  position: absolute !important;
+  z-index: -1;
+  bottom: 2px;
+  left: 15px;
+  font-size: 11px !important;
+  -webkit-transition: all 0.2s ease !important;
+  -o-transition: all 0.2s ease !important;
+  transition: all 0.2s ease !important;
+  color: rgba(69,69,69,0.5);
+}
+
+.name-field, .email-field{
+  border: none !important;
+  border-bottom: 1px solid #3a364e !important;
+  border-radius: 0px !important;
+  background-color: transparent !important;
+}
+
+.focus-border{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #cc262d;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:focus ~ .focus-border{
+  width: 100%; -webkit-transition:
+  0.4s; -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:focus ~ .text-label{
+  bottom: 20px !important;
+  left: 15px;
+  -webkit-transition: all 0.4s ease !important;
+  -o-transition: all 0.4s ease !important;
+  transition: all 0.4s ease !important;
 }

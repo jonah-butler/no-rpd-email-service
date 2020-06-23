@@ -11,7 +11,7 @@ function errorMessage(){
   let textAreaParent = document.querySelector('.submit-notification');
   textAreaParent.style.display = 'block';
   textAreaParent.classList.add('error');
-  textArea.innerHTML = 'Looks like there was a problem establishing a connection. Refresh the page and try again. Or contact me at jonahbutler@gmail.com. Or you can email the superintendent with the publicly listed address: '
+  textArea.innerHTML = 'Looks like there was a problem establishing a connection. Refresh the page and try again. Or contact me at community-voice@norpdinrps.com. Or you can email your district representative directly at one the emails listed above.'
 }
 
 export { successMessage, errorMessage };

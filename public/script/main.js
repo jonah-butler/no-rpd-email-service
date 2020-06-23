@@ -1,22 +1,15 @@
 import { inputListeners, submitFormListener, modalInit, formErrorListener } from './listeners.js';
+import { stickyNav } from './ui.js';
 
 $(document).ready(function(){
           $('.ui.dropdown').dropdown();
 });
 
-window.onscroll = function() {myFunction()};
+const navbar = document.querySelector(".sticky-top");
+const navbarHeight = navbar.offsetTop;
+window.onscroll = function() {stickyNav(navbarHeight, navbar)};
 
-var navbar = document.querySelector(".sticky-top");
 
-var sticky = navbar.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
 
 
 let formObj = {
@@ -37,12 +30,22 @@ let formObj = {
 
 }
 
+let validationObj = {
+
+  nameInput: document.querySelector('.name-field'),
+
+  emailInput: document.querySelector('.email-field'),
+
+  repEmail: document.querySelector('.representative')
+
+}
 
 
 
 
 
-submitFormListener(formObj.submitBtn, formObj);
+
+submitFormListener(formObj.submitBtn, formObj, validationObj);
 
 modalInit(document.querySelector('.text-event-modal'));
 

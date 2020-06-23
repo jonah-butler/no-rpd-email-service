@@ -7,24 +7,23 @@
 </div>
 
 <div class="ui container">
-  <div class="ui segment">
-    <p>Spicy jalapeno bacon ipsum dolor amet meatball beef alcatra capicola, salami picanha tail ground round chicken meatloaf frankfurter turducken. Landjaeger frankfurter boudin, rump filet mignon jerky spare ribs chuck bresaola. Chicken frankfurter kielbasa tri-tip cupim alcatra ribeye. Shankle frankfurter ground round meatloaf kevin, ham hock boudin ham spare ribs. Kielbasa doner biltong beef ribs ham landjaeger turducken ham hock shoulder. Tenderloin bacon buffalo picanha chicken ribeye. Fatback rump corned beef pork belly ball tip venison tri-tip.</p>
+  <div class="ui segment header-text">
+    <p>Three weeks after the death of George Floyd at the hands of Minneapolis police and the tumultuous protests that followed, RPS school board met on June 15th to receive an overview of the memorandum of understanding (MOU) with the Richmond Police Department.</p>
+    <p>On that same night, the school board received 47 pages of public comment, with many city residents urging the board and the administration to terminate the MOU. At that meeting, RPS administration recommended a 90-day in-depth review of the school resource officer program, during which time they would gather more data, hold focus groups with students and staff from all schools that have SROs, schedule a public hearing specifically on this issue, and research potential alternatives.</p>
+    <p>We believe that all Richmond residents should have a voice in this issue and urge the school board to terminate the MOU. Please use the form below to tell your school board member that what our schools need are counselors and mental health providers, not police in our schools.</p>
   </div>
 </div>
 
 <div class="ui divider"></div>
 
 <div id="form" class="ui container">
-  <div class="ui container">
-    If you are unsure of your district, check out the <span class="text-event-modal">District Map</span>.
-  </div>
-  <div class="ui container">
-    <label>Select your district's school board representative</label>
+  <div class="ui segment">
+    <h2>Select your district's school board representative</h2>
     <div class="ui fluid selection dropdown">
     <input type="hidden" class="representative" name="representative">
     <i class="dropdown icon"></i>
     <div class="default text">Select District</div>
-    <div class="menu">
+    <div class="menu dropdown-menu-items">
       <div class="item" data-value="edoerr@rvaschools.net">
         <span>1st district</span>
         Elizabeth Doerr
@@ -63,13 +62,17 @@
       </div>
     </div>
   </div>
-
+  <div class="form-helper">
+    If you are unsure of your district, check out the <span class="text-event-modal">District Map</span>.
   </div>
-
+</div>
   <form class="ui form">
+    <div class="ui segment" style="background-color: transparent !important">
+      <h2>Personal Information</h2>
     <div class="field user-name-input user-text-input">
-      <label>Name</label>
-      <input class="name-field" type="text" name="first-name" placeholder="First Name">
+      <input class="name-field" type="text" name="first-name" placeholder="">
+      <label class="text-label">Name</label>
+      <span class="focus-border"></span>
     </div>
     <div class="ui name-warning warning message">
       <div class="header">Could you check something!</div>
@@ -78,8 +81,9 @@
         </ul>
     </div>
     <div class="field user-email-input user-text-input">
-      <label>Email</label>
-      <input class="email-field" type="text" name="email" placeholder="Email">
+      <input class="email-field" type="text" name="email" placeholder="">
+      <label class="text-label">Email</label>
+      <span class="focus-border"></span>
     </div>
     <div class="ui email-warning warning message">
       <div class="header">Could you check something!</div>
@@ -87,25 +91,29 @@
           <li>Looks like there was a problem with your name form</li>
         </ul>
     </div>
+    </div>
+    <div class="ui segment">
+      <h2>Message</h2>
     <div class="field">
-      <label>Message Body</label>
-      <textarea class="default-message-field" readonly="" placeholder="Dear [SCHOOL BOARD MEMBER],
+      <div class="text-area-label">Message Body</div>
+      <textarea class="default-message-field" readonly="" placeholder="Dear school board member,
 
-I am a [RICHMOND TEACHER, STUDENT, CITIZEN] living in your district.  I am writing to urge you to vote to terminate the memorandum of understanding between RPD and RPS and move immediately on a one-to-one replacement of school resource officers with nondisciplinary support staff positions like counselors and mental health providers.  The district’s strategic plan, DREAMS4RPS, outlines a commitment to creating a safe and loving school culture.  This cannot be fully realized should RPS continue to staff schools with police officers.  Long before the high-profile murders of unarmed Black civilians by officers and the presence of militarized police forces at peaceful protests, police interactions have been a source of trauma for students and families throughout our division.  The mere presence of an officer can trigger memories of violent events and family member removal in students.  Reliance on SROs criminalizes students and their behaviors that can and must be addressed compassionately through other means.
+I am a Richmond resident living in your district.  I am writing to urge you to vote to terminate the memorandum of understanding between RPD and RPS and move immediately on a one-to-one replacement of school resource officers with nondisciplinary support staff positions like counselors and mental health providers.  The district’s strategic plan, DREAMS4RPS, outlines a commitment to creating a safe and loving school culture.  This cannot be fully realized should RPS continue to staff schools with police officers.  Long before the high-profile murders of unarmed Black civilians by officers and the presence of militarized police forces at peaceful protests, police interactions have been a source of trauma for students and families throughout our division.  The mere presence of an officer can trigger memories of violent events and family member removal in students.  Reliance on SROs criminalizes students and their behaviors that can and must be addressed compassionately through other means.
 In addition to the termination of the MOU, I urge you to support the re-allocation of funds to hire more guidance counselors, behavior counselors, and mental health providers in our schools, implement restorative justice practices in schools across the district, and support the student leaders who are working to build a coalition to address racial disparities in RPS.
 
 Thank you for your time and consideration.
 "></textarea>
     </div>
     <div class="field">
-      <label>If you would prefer to write your own message, please fill out this form area, and this message will be sent instead</label>
+      <div class="text-area-label">If you would prefer to write your own message, please fill out this form area, and this message will be sent instead</div>
       <textarea class="optional-message-field" placeholder="Enter optional message body"></textarea>
+    </div>
     </div>
     <div class="field">
       <div class="inline field">
         <div class="ui checkbox">
           <input class="validation-checkbox" type="checkbox" name="terms">
-          <label>Confirm Humanity</label>
+          <label class="checkbox-label">Confirm Humanity</label>
         </div>
       </div>
     </div>
@@ -115,7 +123,9 @@ Thank you for your time and consideration.
 
         </div>
     </div>
+
     <button class="ui button" type="button" id="submit">Submit</button>
+
     <div class="ui submit-warning message">
       <div class="header">Uh-oh something went wrong!!! :(</div>
         <ul class="list">
@@ -123,7 +133,7 @@ Thank you for your time and consideration.
         </ul>
     </div>
   </form>
-</div>
+</div> <!-- outermost container -->
 
 
 

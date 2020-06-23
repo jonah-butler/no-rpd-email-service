@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const ejs = require('ejs');
-// const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const sgMail = require('@sendgrid/mail');
 
@@ -24,13 +23,11 @@ app.get("/", (req, res) => {
 
 app.post("/submit", (req, res) => {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-  // to: ['jonahbutler6@gmail.com', 'jonahbutler@jonahbutlermusic.com'];
-  // superintendent Kamras jkamras@rvaschools.net
+
 	const msg = {
 	  to: 'jonahbutler6@gmail.com',
 	  from: 'community-voice@norpdinrps.com',
 	  subject: 'Sample Subject',
-	  // text: req.body.message,
     html: "<h3>" + req.body.messageHeader + "</h3> <br><br> <p>" + req.body.message + "</p> <br><br> <p style='font-size: 10px'>" + req.body.messageFooter + "</p>"
 	};
 		sgMail.send(msg)
