@@ -25,9 +25,9 @@ app.post("/submit", (req, res) => {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 	const msg = {
-	  to: 'jonahbutler6@gmail.com',
+	  to: req.body.repEmail,
 	  from: 'community-voice@norpdinrps.com',
-	  subject: 'Sample Subject',
+	  subject: 'Terminate Relations with RPD',
     html: "<h3>" + req.body.messageHeader + "</h3> <br><br> <p>" + req.body.message + "</p> <br><br> <p style='font-size: 10px'>" + req.body.messageFooter + "</p>"
 	};
 		sgMail.send(msg)
